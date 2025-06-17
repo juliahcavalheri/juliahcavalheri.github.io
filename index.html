@@ -5,53 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio | Julia Cavalheri</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9fafb;
-      color: #111827;
+      background-color: #111827;
+      color: #f9fafb;
     }
     header {
       background-color: #1f2937;
       color: #fff;
-      padding: 2rem;
+      padding: 3rem 1rem 2rem;
       text-align: center;
     }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #f9fafb;
+    }
     section {
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
     h2 {
-      color: #1f2937;
-      border-bottom: 2px solid #e5e7eb;
+      color: #fbbf24;
+      border-bottom: 2px solid #374151;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     .project {
-      background-color: #fff;
+      background-color: #1f2937;
       padding: 1rem;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
+      border: 1px solid #374151;
+      border-radius: 10px;
       margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .project a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
     }
     .social-links a {
-      margin-right: 1rem;
-      color: #2563eb;
+      color: #fbbf24;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .social-links img {
+      width: 20px;
+      height: 20px;
+    }
+    .cv-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fbbf24;
+      color: #1f2937;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #f3f4f6;
+      background-color: #1f2937;
       font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header img {
+        width: 90px;
+        height: 90px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="https://avatars.githubusercontent.com/u/158847860?v=4" alt="Julia Cavalheri" />
     <h1>Julia Helena Cavalheri</h1>
     <p>Biomédica em transição para Ciência de Dados e Tecnologia</p>
+    <a href="./curriculo.pdf" class="cv-button" download>📄 Baixar Currículo</a>
   </header>
 
   <section>
@@ -65,9 +118,19 @@
   <section>
     <h2>Projetos</h2>
     <div class="project">
-      <h3>🧽 Análise de Dados sobre Diabetes</h3>
+      <h3>🩺 Análise de Dados sobre Diabetes</h3>
       <p>
-        Projeto em desenvolvimento que explora dados de saúde utilizando técnicas de análise exploratória e visualização em Python. Em breve no GitHub.
+        Projeto em desenvolvimento que explora dados de saúde utilizando técnicas de análise exploratória e visualização em Python.
+        <br>
+        <a href="https://github.com/juliahcavalheri/analise-diabetes" target="_blank">Ver no GitHub</a>
+      </p>
+    </div>
+    <div class="project">
+      <h3>📊 Dashboard Interativo em Power BI</h3>
+      <p>
+        Criação de dashboard visual com métricas e KPIs de uma base fictícia de vendas para treinar modelagem e visualização de dados.
+        <br>
+        <a href="#" target="_blank">Em breve</a>
       </p>
     </div>
   </section>
@@ -87,11 +150,20 @@
 
   <section>
     <h2>Contato</h2>
-    <p class="social-links">
-      <a href="https://www.linkedin.com/in/julia-helena-cavalheri" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/juliacavalheri" target="_blank">Instagram</a>
-      <a href="https://github.com/juliahcavalheri" target="_blank">GitHub</a>
-    </p>
+    <div class="social-links">
+      <a href="mailto:juliacavalheri@gmail.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />E-mail
+      </a>
+      <a href="https://www.linkedin.com/in/julia-helena-cavalheri" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />LinkedIn
+      </a>
+      <a href="https://www.instagram.com/juliacavalheri" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />Instagram
+      </a>
+      <a href="https://github.com/juliahcavalheri" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />GitHub
+      </a>
+    </div>
   </section>
 
   <footer>
@@ -99,4 +171,3 @@
   </footer>
 </body>
 </html>
-
